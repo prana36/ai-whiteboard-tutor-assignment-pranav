@@ -1,16 +1,13 @@
 import type { Metadata } from "next";
 
-import { AppProviders } from "@/components/AppProviders";
-
 import "./globals.css";
 
 export const metadata: Metadata = {
   title: {
-    default: "RK Operator Control System",
-    template: "%s | RK Operator Control System",
+    default: "Scribblewise — Learn it by seeing it",
+    template: "%s | Scribblewise",
   },
-  description:
-    "Modern admin dashboard for restricted filing workstations with face ID, browser control, alerts, and audit oversight.",
+  description: "A curious, AI-powered visual tutor that teaches ideas through synchronized whiteboard sketches and voice.",
 };
 
 export default function RootLayout({
@@ -19,10 +16,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="theme-dark" suppressHydrationWarning>
-      <body className="min-h-screen bg-[var(--bg-app)] font-[family-name:var(--font-sans)] text-[var(--text-primary)]">
-        <AppProviders>{children}</AppProviders>
-      </body>
+    <html lang="en" suppressHydrationWarning>
+      <body className="min-h-screen bg-[var(--bg-app)] font-[family-name:var(--font-sans)] text-[var(--text-primary)]">{children}</body>
     </html>
   );
 }

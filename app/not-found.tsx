@@ -1,31 +1,6 @@
 import Link from "next/link";
-import { SearchX } from "lucide-react";
-
-import { Button } from "@/components/ui/button";
-import { Card, CardContent } from "@/components/ui/card";
+import { ArrowLeft, SearchX } from "lucide-react";
 
 export default function NotFound() {
-  return (
-    <div className="flex min-h-screen items-center justify-center px-4">
-      <Card className="w-full max-w-xl">
-        <CardContent className="flex flex-col items-center gap-5 p-10 text-center">
-          <div className="flex h-16 w-16 items-center justify-center rounded-3xl bg-slate-100 text-slate-500 dark:bg-slate-900 dark:text-slate-300">
-            <SearchX className="h-7 w-7" />
-          </div>
-          <div className="space-y-3">
-            <h1 className="font-[family-name:var(--font-display)] text-3xl font-semibold text-slate-950 dark:text-white">
-              Page not found
-            </h1>
-            <p className="text-sm leading-7 text-slate-500 dark:text-slate-400">
-              The requested RK control view could not be located. Head back to the dashboard and
-              continue from there.
-            </p>
-          </div>
-          <Button asChild>
-            <Link href="/dashboard">Go to dashboard</Link>
-          </Button>
-        </CardContent>
-      </Card>
-    </div>
-  );
+  return <main className="flex min-h-screen items-center justify-center bg-[#f5f5f2] px-5 text-[#252a35]"><div className="max-w-md rounded-[28px] border border-[#e8e7e1] bg-white p-9 text-center shadow-[0_20px_70px_rgba(39,46,62,0.08)]"><div className="mx-auto flex h-14 w-14 items-center justify-center rounded-2xl bg-[#e9edff] text-[#3867e8]"><SearchX size={24} /></div><h1 className="mt-5 text-2xl font-semibold">This page wandered off</h1><p className="mt-2 text-sm leading-6 text-[#777c86]">Let’s head back to the whiteboard and keep learning.</p><Link href="/" className="mt-6 inline-flex items-center gap-2 rounded-full bg-[#3867e8] px-4 py-2.5 text-sm font-semibold text-white hover:bg-[#2857d7]"><ArrowLeft size={15} />Back to Scribblewise</Link></div></main>;
 }
