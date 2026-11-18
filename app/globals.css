@@ -1,0 +1,68 @@
+@import "tailwindcss";
+
+:root {
+  --bg-app: #f3f6fb;
+  --bg-panel: rgba(255, 255, 255, 0.78);
+  --bg-elevated: rgba(255, 255, 255, 0.92);
+  --text-primary: #0f172a;
+  --text-muted: #475569;
+  --border-soft: rgba(148, 163, 184, 0.22);
+  --font-sans: "Aptos", "Segoe UI Variable Text", "Segoe UI", sans-serif;
+  --font-display: "Segoe UI Variable Display", "Aptos Display", "Trebuchet MS", sans-serif;
+  --font-mono: "JetBrains Mono", "Cascadia Code", Consolas, monospace;
+}
+
+html.theme-dark {
+  --bg-app: #07111f;
+  --bg-panel: rgba(2, 6, 23, 0.74);
+  --bg-elevated: rgba(2, 6, 23, 0.9);
+  --text-primary: #e5edf8;
+  --text-muted: #94a3b8;
+  --border-soft: rgba(51, 65, 85, 0.75);
+}
+
+@theme inline {
+  --color-background: var(--bg-app);
+  --color-foreground: var(--text-primary);
+  --font-sans: var(--font-sans);
+  --font-mono: var(--font-mono);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(124, 58, 237, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(20, 184, 166, 0.12), transparent 24%),
+    radial-gradient(circle at bottom left, rgba(245, 158, 11, 0.1), transparent 26%),
+    var(--bg-app);
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  text-rendering: optimizeLegibility;
+}
+
+::selection {
+  background: rgba(124, 58, 237, 0.28);
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-thumb {
+  border: 3px solid transparent;
+  border-radius: 999px;
+  background: rgba(148, 163, 184, 0.35);
+  background-clip: padding-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
